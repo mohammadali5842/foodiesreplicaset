@@ -30,14 +30,14 @@ spec:
               path: /fodies/actuator/health/readiness
             initialDelaySeconds: 15
             timeoutSeconds: 15
-            failureThresehold: 3
+            failureThreshold: 3
           livenessProbe:
             httpGet:
               port: 8080
               path: /fodies/actuator/health/liveness
             initialDelaySeconds: 15
             timeoutSeconds: 15
-            failureThresehold: 3
+            failureThreshold: 3
                           
 
 
