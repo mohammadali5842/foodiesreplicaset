@@ -27,14 +27,14 @@ spec:
           readinessProbe:
             httpGet:
               port: 8080
-              path: /fodies/actuator/health/readiness
+              path: /foodies/actuator/health/readiness
             initialDelaySeconds: 15
             timeoutSeconds: 15
             failureThreshold: 3
           livenessProbe:
             httpGet:
               port: 8080
-              path: /fodies/actuator/health/liveness
+              path: /foodies/actuator/health/liveness
             initialDelaySeconds: 15
             timeoutSeconds: 15
             failureThreshold: 3
