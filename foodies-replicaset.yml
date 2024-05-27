@@ -6,51 +6,35 @@ metadata:
     app: foodies
 spec:
   replicas: 2
-  selector: 
+  selector:
     matchLabels:
       app: foodies
-      version: "1.0"  
+      version: "1.0"
   template:
     metadata:
-      name: foodiespod
       labels:
         app: foodies
         version: "1.0"
-    spec: 
+    spec:
       containers:
         - name: foodies
-          image: mohommadali/foodiesreplicaset:1.0
-          ports: 
+          image: techsriman/foodies:1.0
+          ports:
             - name: tomcatport
               containerPort: 8080
               protocol: TCP
           readinessProbe:
             httpGet:
-              path: /actuator/health/readiness
+              path: /foodies/actuator/health/readiness
               port: 8080
             initialDelaySeconds: 15
             timeoutSeconds: 15
             failureThreshold: 3
           livenessProbe:
             httpGet:
-              path: /actuator/health/liveness
+              path: /foodies/actuator/health/liveness
               port: 8080
             initialDelaySeconds: 15
             timeoutSeconds: 15
             failureThreshold: 3
-                          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
