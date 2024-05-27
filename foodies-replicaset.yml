@@ -26,15 +26,15 @@ spec:
               protocol: TCP
           readinessProbe:
             httpGet:
-              port: 8080
               path: /foodies/actuator/health/readiness
+              port: 8080
             initialDelaySeconds: 15
             timeoutSeconds: 15
             failureThreshold: 3
           livenessProbe:
             httpGet:
-              port: 8080
               path: /foodies/actuator/health/liveness
+              port: 8080
             initialDelaySeconds: 15
             timeoutSeconds: 15
             failureThreshold: 3
