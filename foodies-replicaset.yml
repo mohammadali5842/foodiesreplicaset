@@ -24,17 +24,17 @@ spec:
             - name: tomcatport
               containerPort: 8080
               protocol: TCP
-          readinessProbe:
-            httpGet:
-              path: /foodies/actuator/health/readiness
-              port: 8080
-            initialDelaySeconds: 15
-            timeoutSeconds: 15
-            failureThreshold: 3
-          livenessProbe:
-            httpGet:
-              path: /foodies/actuator/health/liveness
-              port: 8080
+          # readinessProbe:
+          #   httpGet:
+          #     path: /foodies/actuator/health/readiness
+          #     port: 8080
+          #   initialDelaySeconds: 15
+          #   timeoutSeconds: 15
+          #   failureThreshold: 3
+          # livenessProbe:
+          #   httpGet:
+          #     path: /foodies/actuator/health/liveness
+          #     port: 8080
             initialDelaySeconds: 15
             timeoutSeconds: 15
             failureThreshold: 3
