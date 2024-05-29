@@ -38,9 +38,6 @@ spec:
             initialDelaySeconds: 15
             timeoutSeconds: 15
             failureThreshold: 3
-                          
-
-
 
 
 
